@@ -2,10 +2,9 @@ function checkYuGiOh(n) {
     let replace;
     let box = [];
     if(typeof n === 'string') {
-        console.log(`invalid parameter: "${n}"`)
+        return `invalid parameter: "${n}"`
     } else {
          for(let i = 1; i <= n; i++) {
-        // console.log(i)
         if((i % 2) == 0 && (i % 3) == 0 && (i % 5) == 0) {
             replace = "yu-gi-oh"
         } else if(i % 2 == 0 && i % 5 == 0) {
@@ -27,14 +26,14 @@ function checkYuGiOh(n) {
         }
         box.push(replace);
     }
-    console.log(box)
+    return box
     }
    
 }
 
 
 
-// checkYuGiOh(10)
-checkYuGiOh(100)
-// checkYuGiOh(5)
-// checkYuGiOh("fizzbuzz is meh")
+// console.log(checkYuGiOh(10))
+// console.log(checkYuGiOh(100))
+// console.log(checkYuGiOh(5))
+console.log(checkYuGiOh("fizzbuzz is meh"))
